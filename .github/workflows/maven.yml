@@ -45,4 +45,4 @@ jobs:
     - name: Deploy
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      run: mvn -B deploy -DskipTests
+      run: mvn -B deploy -s $GITHUB_WORKSPACE/settings.xml -DskipTests
