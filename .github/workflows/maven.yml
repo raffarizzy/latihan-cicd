@@ -38,7 +38,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
-      run: mvn -B verify org.sonarsource.scanner.maven:maven.sonar.plugin:sonar \ -Dsonar.host.url=https://sonarcloud.io/ \ -Dsonar.projectKey=raffarizzy_continous-inspection \ -Dsonar.organization=raffarizzy
+      run: mvn -B verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.projectKey=raffarizzy_continous-inspection -Dsonar.organization=raffarizzy
 
     - name: Deploy
       env:
