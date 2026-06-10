@@ -32,6 +32,7 @@ jobs:
       with:
         java-version: '21'
         distribution: 'temurin'
+        server-id: github
         cache: maven
     
     - name: Build,Test dan Analisis
